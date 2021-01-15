@@ -1,0 +1,26 @@
+# /etc/conf.d/dequantd: config file for /etc/init.d/dequantd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/dequant/dequant.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/dequantd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/dequantd.pid"
+
+# Where to write dequantd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/dequantd"
+
+# User and group to own dequantd process
+#BITCOIND_USER="dequant"
+#BITCOIND_GROUP="dequant"
+
+# Path to dequantd executable
+#BITCOIND_BIN="/usr/bin/dequantd"
+
+# Nice value to run dequantd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,26 @@
+[Unit]
+Description=Dequant's distributed currency daemon
+After=network.target
+
+[Service]
+User=dequant
+Group=dequant
+
+Type=forking
+PIDFile=/var/lib/dequantd/dequantd.pid
+
+ExecStart=/usr/bin/dequantd -daemon -pid=/var/lib/dequantd/dequantd.pid \
+          -conf=/etc/dequant/dequant.conf -datadir=/var/lib/dequantd
+
+ExecStop=-/usr/bin/dequant-cli -conf=/etc/dequant/dequant.conf \
+         -datadir=/var/lib/dequantd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

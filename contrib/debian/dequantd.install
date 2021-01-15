@@ -1,0 +1,2 @@
+usr/local/bin/dequantd usr/bin
+usr/local/bin/dequant-cli usr/bin

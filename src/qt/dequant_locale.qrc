@@ -1,0 +1,36 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/dequant_bg.qm</file>
+        <file alias="ca">locale/dequant_ca.qm</file>
+        <file alias="cs">locale/dequant_cs.qm</file>
+        <file alias="da">locale/dequant_da.qm</file>
+        <file alias="de">locale/dequant_de.qm</file>
+        <file alias="en">locale/dequant_en.qm</file>
+        <file alias="en_US">locale/dequant_en_US.qm</file>
+        <file alias="eo">locale/dequant_eo.qm</file>
+        <file alias="es">locale/dequant_es.qm</file>
+        <file alias="es_ES">locale/dequant_es_ES.qm</file>
+        <file alias="fi">locale/dequant_fi.qm</file>
+        <file alias="fr_FR">locale/dequant_fr_FR.qm</file>
+        <file alias="hi_IN">locale/dequant_hi_IN.qm</file>
+        <file alias="hr">locale/dequant_hr.qm</file>
+        <file alias="hr_HR">locale/dequant_hr_HR.qm</file>
+        <file alias="it">locale/dequant_it.qm</file>
+        <file alias="ja">locale/dequant_ja.qm</file>
+        <file alias="ko_KR">locale/dequant_ko_KR.qm</file>
+        <file alias="lt_LT">locale/dequant_lt_LT.qm</file>
+        <file alias="nl">locale/dequant_nl.qm</file>
+        <file alias="pl">locale/dequant_pl.qm</file>
+        <file alias="pt">locale/dequant_pt.qm</file>
+        <file alias="pt_BR">locale/dequant_pt_BR.qm</file>
+        <file alias="ro_RO">locale/dequant_ro_RO.qm</file>
+        <file alias="ru">locale/dequant_ru.qm</file>
+        <file alias="sk">locale/dequant_sk.qm</file>
+        <file alias="sv">locale/dequant_sv.qm</file>
+        <file alias="tr">locale/dequant_tr.qm</file>
+        <file alias="uk">locale/dequant_uk.qm</file>
+        <file alias="vi">locale/dequant_vi.qm</file>
+        <file alias="zh_CN">locale/dequant_zh_CN.qm</file>
+        <file alias="zh_TW">locale/dequant_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dequant
+Comment=Dequant P2P Cryptocurrency
+Comment[fr]=Dequant, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Dequant, eşten eşe kriptografik sanal para birimi
+Exec=dequant-qt %u
+Terminal=false
+Type=Application
+Icon=dequant128
+MimeType=x-scheme-handler/dequant;
+Categories=Office;Finance;
