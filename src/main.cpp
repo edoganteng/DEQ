@@ -1920,16 +1920,16 @@ int64_t GetBlockValue(int nHeight)
 	if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 0) {
 		nSubsidy = 50000 * COIN;
 	}
-	else if (nHeight <= 20000 && nHeight > Params().LAST_POW_BLOCK()) {
+	else if (nHeight <= 17000 && nHeight > Params().LAST_POW_BLOCK()) {
 		nSubsidy = 1 * COIN;
 	}
-	else if (nHeight <= 40000 && nHeight > 20000) {
-		nSubsidy = 1.5 * COIN;
+	else if (nHeight <= 30000 && nHeight > 17000) {
+		nSubsidy = 1 * COIN;
 	}
-	else if (nHeight <= 60000 && nHeight > 40000) {
+	else if (nHeight <= 50000 && nHeight > 30000) {
 		nSubsidy = 2 * COIN;
 	}
-	else if (nHeight <= 80000 && nHeight > 60000) {
+	else if (nHeight <= 80000 && nHeight > 50000) {
 		nSubsidy = 3 * COIN;
 	}
 	else if (nHeight <= 100000 && nHeight > 80000) {
@@ -6548,13 +6548,13 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       it was the one which was commented out
 int ActiveProtocol()
 {
-	// SPORK_14 was used for 90000 (v1.0.0+)
-	  // if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
-	 //	return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	// SPORK_14 was used for 90002 (v2.0.0+)
+	    if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
+	  return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 
 	// SPORK_15 is used for 90001 (v1.1.0+)
-	   if (IsSporkActive (SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
-		  return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	  // if (IsSporkActive (SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
+		 // return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 
 	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }

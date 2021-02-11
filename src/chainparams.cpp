@@ -58,11 +58,12 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (0, uint256("0x0000016644fd343c4a49f5479d35a634a7a599236fe8d2223c5b8679cac3bad7"))
 	(275, uint256("0x59d4c0b191da8df077e31f349d36506fce57f4bcd3cf7fd8a0732d2fa7783953"))
 	(4480, uint256("0xf8648e78e0ddd8358d8371c0b9bfabf18c15c78519f6a1368735bdfab41f8675"))
-	(5433, uint256("0x49fa1734806a25b76b7878b16172bc9a017bafe9ec8355d29af45a6b37279532"));
+	(5433, uint256("0x49fa1734806a25b76b7878b16172bc9a017bafe9ec8355d29af45a6b37279532"))
+	(12000, uint256("0x72335b0212372b16b86f7e3bf302d3c09423f95d77112494b91ae41241b85655"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1610806821, // * UNIX timestamp of last checkpoint block
-    11102,		// * total number of transactions between genesis and last checkpoint
+    1613014406, // * UNIX timestamp of last checkpoint block
+    26106,		// * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -127,7 +128,7 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // DEQ: 1 day
-        nTargetSpacing = 5 * 60;  // DEQ: 5 minute
+        nTargetSpacing = 2 * 60;  // DEQ: 2 minute
         nMaturity = 61;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 50000000 * COIN;
@@ -224,19 +225,19 @@ public:
       }
     });
     vMasternodeTiers.push_back ({
-      20000,
+      17000,
       {
         {  250 * COIN, 90 }
       }
     });
     vMasternodeTiers.push_back ({
-      40000,
+      30000,
       {
         {   500 * COIN, 90 }
       }
     });
     vMasternodeTiers.push_back ({
-      60000,
+      50000,
       {
         {   1000 * COIN, 90 }
       }
