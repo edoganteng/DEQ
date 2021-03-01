@@ -59,11 +59,12 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	(275, uint256("0x59d4c0b191da8df077e31f349d36506fce57f4bcd3cf7fd8a0732d2fa7783953"))
 	(4480, uint256("0xf8648e78e0ddd8358d8371c0b9bfabf18c15c78519f6a1368735bdfab41f8675"))
 	(5433, uint256("0x49fa1734806a25b76b7878b16172bc9a017bafe9ec8355d29af45a6b37279532"))
-	(12000, uint256("0x72335b0212372b16b86f7e3bf302d3c09423f95d77112494b91ae41241b85655"));
+	(12000, uint256("0x72335b0212372b16b86f7e3bf302d3c09423f95d77112494b91ae41241b85655"))
+	(22712, uint256("0xd3fc4e06c60919ef90445dd40f10aef311a6ba4346693e32c3079dde8c2a39fe"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1613014406, // * UNIX timestamp of last checkpoint block
-    26106,		// * total number of transactions between genesis and last checkpoint
+    1614590351, // * UNIX timestamp of last checkpoint block
+    50310,		// * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -218,88 +219,257 @@ public:
         nZerocoinHeaderVersion = 4; //Block headers must be this version once zerocoin is active
         nZerocoinRequiredStakeDepth = 200; //The required confirmations for a zdeq to be stakable
         
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       0,
       {
         {   50 * COIN, 90 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       17000,
       {
-        {  250 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 90 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       30000,
       {
-        {   500 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 90 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       50000,
       {
-        {   1000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 90 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       80000,
       {
-        {   2500 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 90 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       100000,
       {
-        {  5000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 90 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       125000,
       {
-        {   7500 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 90 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       150000,
       {
-        {  10000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 90 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       200000,
       {
-        {   20000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 90 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       250000,
       {
-        {  30000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 90 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       300000,
       {
-        {   40000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 90 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       400000,
       {
-        {  80000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 90 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 0 }
       }
     });
-    vMasternodeTiers.push_back ({
+    vMasternodePhasen.push_back ({
       500000,
       {
-        {   100000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 90 },
+        { 150000 * COIN, 0 }
       }
     });
-	  vMasternodeTiers.push_back ({
+	  vMasternodePhasen.push_back ({
       750000,
       {
-        {  150000 * COIN, 90 }
+        {  	  50 * COIN, 0 },
+        {    250 * COIN, 0 },
+        {  	 500 * COIN, 0 },
+        {  	1000 * COIN, 0 },
+        {  	2500 * COIN, 0 },
+        {  	5000 * COIN, 0 },
+        {  	7500 * COIN, 0 },
+        {  10000 * COIN, 0 },
+        {  20000 * COIN, 0 },
+        {  30000 * COIN, 0 },
+        {  40000 * COIN, 0 },
+        {  80000 * COIN, 0 },
+        { 100000 * COIN, 0 },
+        { 150000 * COIN, 90 }
       }
     });
   }

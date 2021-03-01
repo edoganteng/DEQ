@@ -1978,7 +1978,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 }
 
 int64_t GetMasternodePayment (int nHeight, unsigned int mnLevel, int64_t blockValue, int nMasternodeCount, bool isZDEQStake) {
-  return GetMasternodePayment (nHeight, blockValue, nMasternodeCount, isZDEQStake) * Params ().getMasternodeTierWeight (mnLevel, nHeight) / Params ().getMasternodeTierWeight (0, nHeight);
+  return GetMasternodePayment (nHeight, blockValue, nMasternodeCount, isZDEQStake) * Params ().getMasternodePhaseWeight (mnLevel, nHeight) / Params ().getMasternodePhaseWeight (0, nHeight);
 }
 
 
@@ -6549,12 +6549,12 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 int ActiveProtocol()
 {
 	// SPORK_14 was used for 90002 (v2.0.0+)
-	    if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
-	  return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	    //if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
+	  //return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 
-	// SPORK_15 is used for 90001 (v1.1.0+)
-	  // if (IsSporkActive (SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
-		 // return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+	// SPORK_15 is used for 90003 (v3.0.0+)
+	   if (IsSporkActive (SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
+		  return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 
 	return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
